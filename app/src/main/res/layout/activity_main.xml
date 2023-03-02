@@ -25,6 +25,16 @@
                 android:textAlignment="center"
                 tools:ignore="MissingConstraints" />
 
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Edit text"
+                android:inputType="numberDecimal"
+                android:backgroundTint="@color/red"
+                android:textCursorDrawable="@color/black">
+
+            </EditText>
+
             <Button
                 android:id="@+id/button"
                 android:layout_width="match_parent"
@@ -37,9 +47,11 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/low_res_img"></ImageView>
+                android:src="@drawable/low_res_img"
+                android:scaleType="fitXY"></ImageView>
 
             <TextView
+                android:typeface="monospace"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="20px"
@@ -52,7 +64,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/low_res_img"
-                />
+                tools:ignore="SpeakableTextPresentCheck" />
         </LinearLayout>
     </ScrollView>
 
