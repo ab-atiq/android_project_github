@@ -1,71 +1,274 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <ScrollView
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/textView"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="#29914F"-->
+<!--                android:padding="20px"-->
+<!--                android:text="This is my first android project push in GitHub."-->
+<!--                android:textAlignment="center"-->
+<!--                tools:ignore="MissingConstraints" />-->
+
+<!--            <EditText-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="Edit text"-->
+<!--                android:inputType="numberDecimal"-->
+<!--                android:backgroundTint="@color/red"-->
+<!--                android:textCursorDrawable="@color/black">-->
+
+<!--            </EditText>-->
+
+<!--            <Button-->
+<!--                android:id="@+id/button"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="150px"-->
+<!--                android:background="@color/red"-->
+<!--                android:text="Click Me"-->
+<!--                android:drawableLeft="@drawable/button_img"-->
+<!--                tools:ignore="MissingConstraints" />-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/low_res_img"-->
+<!--                android:scaleType="fitXY"></ImageView>-->
+
+<!--            <TextView-->
+<!--                android:typeface="monospace"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="20px"-->
+<!--                android:text="My Name Is Abul Bashar Atiqur Rahman"-->
+<!--                android:textAlignment="center" />-->
+
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/imageButton"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:srcCompat="@drawable/low_res_img"-->
+<!--                tools:ignore="SpeakableTextPresentCheck" />-->
+
+<!--        </LinearLayout>-->
+<!--    </ScrollView>-->
+
+
+<!--    1. User input check done-->
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="What is your name?"-->
+<!--        android:textSize="30dp"/>-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/inputName"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Enter your name"-->
+<!--        android:inputType="textPersonName"-->
+<!--        android:textSize="20dp"-->
+<!--        />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/clickButton"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Click Button" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/displayText"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="After Click You will see the input text."-->
+<!--        android:textSize="30sp"-->
+<!--        android:textAlignment="center"-->
+<!--        />-->
+
+
+<!--    2. Calculation on Shop profit and percentage-->
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="How much buying price?"-->
+<!--        android:textSize="30dp"/>-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/buyingPrice"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Buying price"-->
+<!--        android:inputType="numberDecimal"-->
+<!--        android:textSize="20dp"/>-->
+
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="How much selling price?"-->
+<!--        android:textSize="30dp"/>-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/sellingPrice"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Selling price"-->
+<!--        android:inputType="numberDecimal"-->
+<!--        android:textSize="20dp"-->
+<!--        />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/calculationButton"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Calculation"-->
+<!--        android:textSize="35dp"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/displayProfit"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text=""-->
+<!--        android:textSize="25dp"/>-->
+
+
+<!--    3. selling price calculate from profit percentage-->
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="How much buying price?"-->
+<!--            android:textSize="30dp"/>-->
+<!--        <EditText-->
+<!--            android:id="@+id/buyingPrice"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Enter Buying Price"-->
+<!--            android:textSize="20dp"/>-->
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="How much profit you want?"-->
+<!--            android:textSize="30dp"/>-->
+<!--        <EditText-->
+<!--            android:id="@+id/percentProfit"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Enter profit percent"-->
+<!--            android:textSize="20dp"/>-->
+<!--        <Button-->
+<!--            android:id="@+id/calculateButton"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Calculate"-->
+<!--            android:textSize="35dp"-->
+<!--            />-->
+<!--        <TextView-->
+<!--            android:id="@+id/displaySellingPrice"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text=""-->
+<!--            android:textSize="25dp"/>-->
+
+
+<!--    4. BMI calculation -->
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BMI Calculator"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:background="@color/red"
+        android:padding="5px"
+        android:textColor="@color/white"
+        android:layout_marginBottom="20px"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Give your weight in KG"
+        android:textSize="25dp"
+        android:padding="5px"
+        android:layout_marginTop="20px"
+        android:layout_marginBottom="20px"
+        />
+    <EditText
+        android:id="@+id/weightKg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Weight in KG"
+        android:inputType="numberDecimal"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Give your height in feet and inch"
+        android:textSize="25dp"
+        android:padding="5px"
+        android:layout_marginTop="20px"
+        android:layout_marginBottom="20px"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10px"
+        android:layout_marginTop="20px"
+        android:layout_marginBottom="20px"
+        android:orientation="horizontal"
+        >
+        <EditText
+            android:id="@+id/heightFeet"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:ems="8"
+            android:inputType="number"
+            android:hint="Feet"
+            android:layout_marginRight="10px"
+            />
+        <EditText
+            android:id="@+id/heightInch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Inch"
+            />
+    </LinearLayout>
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#29914F"
-                android:padding="20px"
-                android:text="This is my first android project push in GitHub."
-                android:textAlignment="center"
-                tools:ignore="MissingConstraints" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <Button
+            android:id="@+id/calculateBMI"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculate BMI"
+            android:textSize="20dp"
+            ></Button>
+    </LinearLayout>
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Edit text"
-                android:inputType="numberDecimal"
-                android:backgroundTint="@color/red"
-                android:textCursorDrawable="@color/black">
+    <TextView
+        android:id="@+id/displayResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20dp"></TextView>
 
-            </EditText>
-
-            <Button
-                android:id="@+id/button"
-                android:layout_width="match_parent"
-                android:layout_height="150px"
-                android:background="@color/red"
-                android:text="Click Me"
-                android:drawableLeft="@drawable/button_img"
-                tools:ignore="MissingConstraints" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/low_res_img"
-                android:scaleType="fitXY"></ImageView>
-
-            <TextView
-                android:typeface="monospace"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="20px"
-                android:text="My Name Is Abul Bashar Atiqur Rahman"
-                android:textAlignment="center" />
-
-
-            <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/low_res_img"
-                tools:ignore="SpeakableTextPresentCheck" />
-        </LinearLayout>
-    </ScrollView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
