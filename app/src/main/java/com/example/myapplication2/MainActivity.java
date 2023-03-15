@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     EditText inputName,inputBuyingPrice,inputSellingPrice,inputProfitPercent, inputWeight, inputHeightFeet, inputHeightInch;
@@ -27,11 +28,26 @@ public class MainActivity extends AppCompatActivity {
         calculationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                double weight,height,BMI;
-                weight=Double.parseDouble(inputWeight.getText().toString());
-                height=(Double.parseDouble(inputHeightFeet.getText().toString())*.3048)+(Double.parseDouble(inputHeightInch.getText().toString())*.0254);
-                BMI=weight/(height*height);
-                displayText.setText("Your BMI is: "+BMI);
+                String SWeight,SHeightFeet, SHeightInch;
+                SWeight=inputWeight.getText().toString();
+                SHeightFeet=inputHeightFeet.getText().toString();
+                SHeightInch=inputHeightInch.getText().toString();
+                if(SWeight.length()>0&&SHeightFeet.length()>0 && SHeightInch.length()>0) {
+                    double weight, height, BMI;
+                    weight = Double.parseDouble(SWeight);
+                    height = (Double.parseDouble(SHeightFeet) * .3048) + (Double.parseDouble(SHeightInch) * .0254);
+                    BMI = weight / (height * height);
+                    if (BMI > 24) {
+                        displayText.setText("Your BMI is: " + BMI + "\nYou are Motu");
+                    } else if (BMI > 18) {
+                        displayText.setText("Your BMI is: " + BMI + "\nYou are Handsome");
+                    } else {
+                        displayText.setText("Your BMI is: " + BMI + "\nYou are chikna");
+                    }
+                }
+                else{
+                    Toast.makeText(MainActivity.this,"Please, Input fields.",Toast.LENGTH_LONG).show();
+                }
             }
         });
 
